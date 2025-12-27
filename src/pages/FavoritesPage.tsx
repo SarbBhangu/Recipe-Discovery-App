@@ -18,24 +18,10 @@ export default function FavoritesPage() {
     <div>
       <h1>Favorites</h1>
 
-      <ul style={{ listStyle: "none", padding: 0 }}>
+      <ul className="card-list">
         {favorites.map((meal) => (
-          <li
-            key={meal.idMeal}
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: 12,
-              marginBottom: 12,
-            }}
-          >
-            <img
-              src={meal.strMealThumb}
-              alt={meal.strMeal}
-              width={64}
-              height={64}
-              style={{ borderRadius: 8, objectFit: "cover" }}
-            />
+          <li key={meal.idMeal} className="card">
+            <img src={meal.strMealThumb} alt={meal.strMeal} width={64} height={64} />
 
             <div style={{ flex: 1 }}>
               <Link to={`/recipe/${meal.idMeal}`}>{meal.strMeal}</Link>
@@ -45,6 +31,7 @@ export default function FavoritesPage() {
           </li>
         ))}
       </ul>
+
     </div>
   );
 }

@@ -14,19 +14,12 @@ export default function Layout() {
   }
 
   return (
-    <div style={{ padding: 16 }}>
-      <nav
-        style={{
-          display: "flex",
-          gap: 16,
-          alignItems: "center",
-          marginBottom: 20,
-        }}
-      >
+    <div className="container">
+      <nav className="nav">
         <Link to="/">Home</Link>
         <Link to="/favorites">Favorites</Link>
 
-        <form onSubmit={handleSubmit} style={{ display: "flex", gap: 8 }}>
+        <form onSubmit={handleSubmit}>
           <input
             type="text"
             placeholder="Search recipes..."
@@ -41,4 +34,5 @@ export default function Layout() {
     </div>
   );
 }
+
 

@@ -40,20 +40,14 @@ export default function SearchResultsPage() {
         <p>No results for: {q}</p>
       ) : null}
 
-      <ul style={{ listStyle: "none", padding: 0 }}>
+      <ul className="card-list">
         {data?.meals?.map((meal) => (
-          <li key={meal.idMeal} style={{ marginBottom: 14 }}>
+          <li key={meal.idMeal} className="card">
             <Link
               to={`/recipe/${meal.idMeal}`}
               style={{ display: "flex", gap: 12, alignItems: "center" }}
             >
-              <img
-                src={meal.strMealThumb}
-                alt={meal.strMeal}
-                width={80}
-                height={80}
-                style={{ borderRadius: 8, objectFit: "cover" }}
-              />
+              <img src={meal.strMealThumb} alt={meal.strMeal} width={80} height={80} />
               <span>{meal.strMeal}</span>
             </Link>
           </li>

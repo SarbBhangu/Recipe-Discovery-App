@@ -17,9 +17,9 @@ export default function HomePage() {
     <div>
       <h1>Categories</h1>
 
-      <ul>
+     <ul className="card-list">
         {data?.categories.map((cat) => (
-          <li key={cat.strCategory} style={{ marginBottom: 8 }}>
+          <li key={cat.strCategory} className="card">
             <Link to={`/category/${encodeURIComponent(cat.strCategory)}`}>
               {cat.strCategory}
             </Link>
