@@ -49,4 +49,7 @@ src/
 ├── App.tsx
 ├── main.tsx
 └── index.css
-
+```
+## Reflection
+This project helped reinforce my understanding of React hooks, custom hooks, routing, and global state management.
+The most challenging part was designing reusable logic for data fetching and managing persistent favorites using Context and localStorage.
